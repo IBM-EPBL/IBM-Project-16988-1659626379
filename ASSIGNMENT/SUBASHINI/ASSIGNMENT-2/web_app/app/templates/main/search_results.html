@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}Movie recommender{% endblock %}
+
+{% block page_content %}
+
+{% if movies %}
+
+    <b>Movie Search Results.</b>
+
+    {% if current_user.is_authenticated %}
+        <hr>
+            Movie ratings are from <b>1</b> (worst) to <b>5</b> (best).
+        <hr>
+    {% endif %}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Movie ID</th>
+                <th>Name</th>
+                {% if current_user.is_authenticated %}
+                <th>Your Rating</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for movie in movies %}
+            <tr>
+                <td>{{ movie.movie_id }}</td>
+                <td>{{ movie.name }}</td>
+                {% if current_user.is_authenticated %}
+                <td>
+                    <!-- TODO: crsf protection -->
+                    <select id="{{ movie.movie_id }}" data-userid="{{ current_user.get_id() }}" class="rating-selector">
+                        <option value="-" {% if movie.rating == None %}selected="selected"{% endif %}>-</option>
+                        <option value="1" {% if movie.rating == 1 %}selected="selected"{% endif %}>1</option>
+                        <option value="2" {% if movie.rating == 2 %}selected="selected"{% endif %}>2</option>
+                        <option value="3" {% if movie.rating == 3 %}selected="selected"{% endif %}>3</option>
+                        <option value="4" {% if movie.rating == 4 %}selected="selected"{% endif %}>4</option>
+                        <option value="5" {% if movie.rating == 5 %}selected="selected"{% endif %}>5</option>
+                    </select> 
+                </td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    {% if not current_user.is_authenticated %}
+    <em><b>Note:</b></em> Album ratings are not displayed because you are not logged in. <a href="{{ url_for('auth.login') }}">Login</a> to show your ratings...
+    <hr/>
+    {% endif %}
+
+{% else %}
+<!-- there are no movies, so we must be on the welcome screen -->
+
+    {% if search_string == "" %}
+    <p>Empty search string - please enter a movie search string.</p>
+    {% else %}
+    <p>No movies found for search string: <b>{{ search_string }}</b>.</p>
+    <p>Remember only ~4000 movies have been uploaded.</p>
+    <p>Here are some examples:</p>
+    <ul>
+        <li>Toy Story</a></li>
+        <li>Jumanji</li>
+        <li>Grumpier Old Men</li>
+    </ul>
+    {% endif %}
+
+
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript">
+
+// FIXME: the approach for flashing the Saving and Saved messages is clunky
+$(".rating-selector").on('change', function () {
+    var movie_id = this.id;
+    var user_id  = this.dataset.userid;
+    var rating   = this.value;
+
+    var select_element = this;
+    $(select_element).hide()
+    $(select_element).parent().append('<span class="saving-note">Saving</span>')
+
+    $.ajax({
+        url: "{{ url_for('main.set_rating') }}",
+        type: "POST",
+        data: JSON.stringify({
+            "movie_id": movie_id, 
+            "user_id":  user_id,
+            "rating":   rating
+        }),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function(){
+            $(".saving-note").remove();
+            $(select_element).parent().append('<span class="saving-note">Saved</span>')
+
+            setTimeout(function(){
+                $(".saving-note").remove();
+                $(select_element).show();
+            }, 1000);
+        }
+    });
+});
+</script>
+{% endblock %}
+
+

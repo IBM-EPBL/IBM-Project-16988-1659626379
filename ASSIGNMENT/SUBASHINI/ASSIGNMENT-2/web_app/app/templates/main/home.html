@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}Movie recommender{% endblock %}
+
+{% block page_content %}
+
+    <h2>Overview</h2>
+    <p>Welcome to this demo movie recommender application.  This demo has been installed with approximately four thousand movies and 500,000 ratings.  The ratings have been generated randomly.  The purpose of this web application is to allow users to search for movies, rate movies, and receive recommendations for movies based on their ratings.
+    <p>To get started:
+    <ul>
+        {% if not current_user.is_authenticated %}
+        <li>New users: <a href="{{ url_for('auth.register') }}">Register</a> for an account</li>
+        <li>Existing users: <a href="{{ url_for('auth.login') }}">Login</a> to your account</li>
+        {% endif %}
+        <li>Use the Search box in the header to search for and rate some movies</li>
+        <li><a href="{{ url_for('main.recommendations') }}">Get Recommendations</a> for movies</li>
+        <li>Click on the <a href="/report">Analytics Dashboard</a> link in the footer to view analytics</li>
+    </ul>
+    <p><b>NOTE:</b> The goal of this webapp is to show Apache Spark Machine Learning. Therefore, some functionality is missing and it doesn't have the polish that you would expect from a commercial movie recommendation web site.</p>
+
+
+    <h2>Technologies</h2>
+    <p>The technologies used in this demo are:</p>
+    <br/>
+
+    <img alt="Overall Architecture" src="{{ url_for('static', filename='movie-recommender-demo.png') }}" width="75%">
+
+    <br/>
+    <br/>
+    
+    <h2>Source Code</h2>
+    <p>The source code for the web application and the jupyter notebooks are available in github: <a href="https://github.com/snowch/movie-recommender-demo/">here</a></p>
+
+    <h2>Running your own demo instance</h2>
+
+    <p>If you would like to deploy your own instance of this demo using your own unique url, please follow the instructions in the github project.
+
+{% endblock %}

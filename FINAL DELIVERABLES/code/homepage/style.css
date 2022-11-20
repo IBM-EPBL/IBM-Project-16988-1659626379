@@ -1,0 +1,242 @@
+.box1 {
+    border: 1px solid black;
+    background-color: black;
+    height: 30px;
+    cursor: pointer;
+  }
+  .s{
+    background-color: rgb(136, 184, 243);
+  }
+  ul {
+    float: left;
+    color: white;
+  }
+  ul li {
+    margin-top: -10px;
+    float: left;
+    position: relative;
+    left: 300%;
+    width: 100px;
+    font-size: 14px;
+    font-family: roboto condensed, sans-serif;
+    list-style: none;
+  }
+  ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  h5 {
+    margin-top: 1px;
+    color: white;
+    margin: 7px 12px;
+    position: relative;
+    left: -18%;
+    font-family: roboto condensed, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .subbox {
+    border: 1px solid transparent;
+    background-color: whitesmoke;
+    height: 50px;
+  }
+  ol {
+    float: left;
+  }
+  ol li {
+    float: left;
+    width: 90px;
+    position: relative;
+    left: 25%;
+    list-style-type: none;
+    font-family: roboto condensed, sans-serif;
+    font-size: 18px;
+  }
+  ol li a {
+    text-decoration: none;
+  }
+  ol li a:hover {
+    border-bottom: 4px solid #6c7ae0;
+  }
+  .fa-search {
+    position: absolute;
+    left: 82%;
+    top: 9%;
+    color: black;
+    cursor: pointer;
+  }
+  .fa-search:hover {
+    color: #6c7ae0;
+  }
+  .fa-user {
+    position: absolute;
+    left: 85%;
+    top: 9%;
+    color: black;
+    cursor: pointer;
+  }
+  .fa-user:hover {
+    color: #6c7ae0;
+  }
+  .fa-shopping-bag {
+    position: absolute;
+    left: 88%;
+    top: 9%;
+    color: black;
+    width: 25px;
+    height: -30px;
+    border-radius: 100px;
+    background-color: navajowhite;
+    margin-top: -2px;
+    margin-left: -4px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .fa-shopping-bag:hover {
+    color: #6c7ae0;
+  }
+  .fa-heart {
+    position: absolute;
+    left: 92%;
+    top: 9%;
+    color: black;
+    cursor: pointer;
+  }
+  .fa-heart:hover {
+    color: #6c7ae0;
+  }
+  h3 {
+    color: #6c7ae0;
+    position: absolute;
+    left: 88.8%;
+    top: 4%;
+    width: 18px;
+    height: -50px;
+    border-radius: 100px;
+    text-align: center;
+    font-family: roboto condensed, sans-serif;
+  }
+  h2 {
+    position: relative;
+    left: -61.2%;
+    text-transform: uppercase;
+    font-family: roboto condensed, sans-serif;
+    margin-top: 4px;
+    font-weight: normal;
+  }
+  font {
+    color: #6c7ae0;
+  }
+  .cover img {
+    background-size: cover;
+    height: 530px;
+    width: 1428px;
+  }
+  .text {
+    position: absolute;
+    top: 30%;
+    left: 7%;
+  }
+  h1 {
+    font-size: 70px;
+    font-family: roboto condensed, sans-serif;
+    text-transform: capitalize;
+    width: 460px;
+    word-spacing: 0px;
+    font-weight: normal;
+    line-height: 72px;
+  }
+  h4 {
+    position: absolute;
+    top: -4%;
+    font-size: 20px;
+    font-family: roboto condensed, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  form input[type="submit"] {
+    position: absolute;
+    top: 86%;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: #6c7ae0;
+    border: none;
+    color: white;
+    font-family: roboto condensed, sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  form input[type="submit"]:hover {
+    background-color: black;
+  }
+  .image1 {
+    position: absolute;
+    left: 10%;
+    top: 100%;
+    border: 1px solid darkgray;
+    box-shadow: 1px 2px 4px;
+  }
+  h6 {
+    color: black;
+    position: absolute;
+    left: 20%;
+    top: 25%;
+    border: 1px solid whitesmoke;
+    width: 200px;
+    font-size: 40px;
+    font-family: roboto condensed, sans-serif;
+    background-color: white;
+    font-weight: normal;
+    text-align: center;
+  }
+  .image1:hover {
+    box-shadow: 1px 3px 9px;
+    color: #6c7ae0;
+  }
+  .image2 {
+    position: absolute;
+    left: 40%;
+    top: 100%;
+    border: 1px solid darkgray;
+    box-shadow: 1px 2px 4px;
+  }
+  h {
+    color: black;
+    position: absolute;
+    left: 20%;
+    top: 55%;
+    border: 1px solid whitesmoke;
+    width: 200px;
+    font-size: 40px;
+    font-family: roboto condensed, sans-serif;
+    background-color: white;
+    text-align: center;
+  }
+  .image2:hover {
+    box-shadow: 1px 3px 9px;
+    color: #6c7ae0;
+  }
+  .image3 {
+    position: absolute;
+    left: 70%;
+    top: 100%;
+    border: 1px solid darkgray;
+    box-shadow: 1px 2px 4px;
+  }
+  .image3:hover {
+    box-shadow: 1px 3px 9px;
+    color: #6c7ae0;
+  }
+  t {
+    color: black;
+    position: absolute;
+    left: 20%;
+    top: 55%;
+    border: 1px solid whitesmoke;
+    width: 200px;
+    font-size: 40px;
+    font-family: roboto condensed, sans-serif;
+    background-color: white;
+    text-align: center;
+  }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="shopstyle.css">
+        <title>Cart Information</title>
+    </head>
+    <body>
+        <div class="header homebutton">
+            <a href="shopindex.html" class="button" id = "backtoproduct">Back to Products Page</a>
+              <h1>Your cart</h1>
+        </div>
+        <br>
+        <div class="modal">
+        </div>
+        <table class = "cartProducts">
+            <tr>
+              <th>Product</th>
+              <th>Product ID</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+
+                       <tr class = "qty">
+                <td>Simple black tee shirt</td>
+                <td>df76789</td>
+                <td>
+                    <span class="dot" id = "plus">+</span>
+                    1
+                    <span class="dot" id = "minus">-</span></td>
+                <td>Rs.250</td>
+              </tr>
+            <tr>
+                <td>Simple red tee shirt</td>
+                <td>d34242f9</td>
+                <td>1</td>
+                <td>Rs.350</td>
+            </tr>
+            <tr>
+                <td>Simple green tee shirt</td>
+                <td>gd89342f9</td>
+                <td>1</td>
+                <td>Rs.250</td>
+            </tr>
+            <tr>
+                <td id = "total">Total:</td>
+                <td colspan="3">Rs.750</td>
+            </tr>
+          </table>
+          <br>
+          <a href="#" class="button" id = "cancelorder">Cancel Order</a>
+          <a href="#" class="button" id = "placeorder">Place Order</a>
+
+
+        
+        
+    
+    <script src="shopapp.js"></script>
+    </body>
+</html>

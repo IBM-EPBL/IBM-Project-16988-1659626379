@@ -1,10 +1,13 @@
-# IBM-Project-16988-1659626379
-Smart Fashion Recommender Application
+<h1> Smart Fashion Recommender Application  </h1>
+<h2>  IBM-Project-16988-1659626379  </h2>
 
-Category: Cloud App Development
-Batch Name : B2-2M4E
+# <a href="https://youtu.be/5ib-7Vh39xY"> Demo Link </a> #
+<br>
 
-Team ID : PNT2022TMID22598
+* Category : Cloud App Development  
+* Batch Name : B2-2M4E 
+
+# Team ID : PNT2022TMID22598 #
 
 Team Size : 4
 
@@ -15,34 +18,29 @@ Team member : GRACELIN C
 Team member : SUBASHINI V
 
 Team member : JANANI L
+<hr>
+Industry Mentor Name : Mr.Krishna Chaitanya
 
-Industry Mentor(s) Name : MR.Krishna Chaitanya
+<br>Faculty Mentor Name : Ms.K.Vidhyalakshmi
 
-Faculty Mentor(s) Name :MS.Vidhyalakshmi
-
-Degree : Bachelor of Engineering/Technology
+Degree : Bachelor of Technology
 
 Branch : Information Technology
 
-College :VELTECH MULTITECH DR.RANGARAJAN DR.SAKUNTHALA ENGINEERING COLLEGE
+College : Vel Tech Multi Tech Dr.Rangarajan and Dr.Shakunthala Engineering College
 
-Assignment
-Team Leader : SNEHA S
-Team member : GRACELIN C
-Team member : SUBASHINI V
-Team member : JANANI L
+<h2> Assignment <br></h2>
 
-Project Design & Planning
-Ideation Phase
-Project Design Phase 1
-Project Design Phase II
-Project Planning
-project development phase
+* <a href="https://github.com/IBM-EPBL/IBM-Project-16988-1659626379/tree/main/ASSIGNMENT/GRACELIN%20C"> GRACELIN C <br> </a>
+* <a href="https://github.com/IBM-EPBL/IBM-Project-16988-1659626379/tree/main/ASSIGNMENT/SNEHA%20S"> SNEHA S <br> </a>
+* <a href="https://github.com/IBM-EPBL/IBM-Project-16988-1659626379/tree/main/ASSIGNMENT/SUBASHINI "> SUBASHINI V <br> </a>
+* <a href="https://github.com/IBM-EPBL/IBM-Project-16988-1659626379/tree/main/ASSIGNMENT/janani">JANANI L <br> </a>
 
-Tech Stack
-Frontend: Html+Css+JavaScript
+<div>
+<h2> Tech Stack </h2>
 
-Backend: Python, Flask , Docker
+* Frontend: HTML , CSS , JavaScript
+* Backend: Python, Flask , Docker
+* Database: IBM DB2
 
-Database: IBM DB2
-
+</div>
